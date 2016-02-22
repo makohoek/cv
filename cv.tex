@@ -1,0 +1,195 @@
+\documentclass[a4paper,11pt]{moderncv}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+\input{contactInformation}
+\input{modernCVTheme}
+
+\begin{document}
+
+\maketitle
+
+\section{Education}
+\cventry{2013 -- 2014}{$5^th$ year computer science: Master degree CAMSI (Informatics, Systems and Machine Architecture Conception}
+{Paul Sabatier University(UPS) (Shanghai rank: 201-300)}{Toulouse}{rang 1/18}
+{
+    with honours: score > 85\%
+}
+
+\cventry{2012 -- 2013}{$4^th$ year computer science: CAMSI}
+{UPS}{Toulouse}{rank: 1/6}
+{
+    with honours: score > 75\%
+}
+
+\cventry{2011 -- 2012}{$3^th$ year fundamental computer science: Bachelor degree}
+{UPS}{Toulouse}{rank: 4/76}
+{
+    with honours: score > 75\%
+}
+
+\cventry{2010 -- 2011}{$2^nd$ year fundamental computer science}
+{UPS}{Toulouse}{rank: 7/67}
+{
+    with honours: score > 75\%
+}
+
+\cventry{2009 -- 2010}{$1^rst$ year fundamental science}
+{UPS}{Toulouse}{}
+{
+}
+
+\cventry{2008 -- 2009}{French Baccalauréat of science}
+{Lycée Léo Ferré}{Gourdon}{}
+{}
+
+
+\section{Experience}
+\cventry{15/09/2014 -- current}{Linux/Android R\&D for Intel Audio CoE}{Intel via Celad}
+{Toulouse}{France}
+{
+    \begin{itemize}
+        \item Android/Linux drivers and HAL
+        \item DSP firmware
+        \item C, C++, Git, Python, Bash, XML, Android build system
+        \item Vim, tmux, bash, awesome
+    \end{itemize}
+}
+
+\cventry{03/04/2014 -- 29/08/2014}{Internship: software developer focused on middleware/opensourcing}{Intel via Celad}
+{Toulouse}{France}
+{
+    \begin{itemize}
+        \item Linux, Android middleware and audio HAL
+        \item Agile software development (scrum)
+        \item Pair programming, Test Driven Development
+        \item Git, GitHub, C++, Python, Bash
+    \end{itemize}
+}
+
+\cventry{06/05/2013 -- 09/08/2013}{Internship: embedded and web development}{24green at Hoogendoorn}
+{Vlaardingen}{The Netherlands}
+{
+    \begin{itemize}
+        \item Implemented Web API working with their product: 24aqua
+        \item Web+Android applications to illustrate that API
+        \item Add new controls to 24aqua and extended API to support it
+        \item Automatic configuration scripts for 24aqua
+        \item Microsoft .NET framework, C\#, HTML, SQL, MVC 4.5
+        \item Agile working (scrum), Test Driven Development
+    \end{itemize}
+}
+
+\cventry{16/04/2012 -- 13/07/2012}{Internship: kernel development}{IRIT in team SEPIA}
+{UPS Toulouse}{France}
+{
+    \begin{itemize}
+        \item Governor (DVFS) for the GNU/Linux kernel
+        \item Research about memory allocation
+        \item Energy optimisation via software
+        \item Kernel/System programming in C
+        \item Bash scripts for testing benchmarks
+        \item Wide scale testing on Grid'5000, a french research grid computing network
+        \item Documentation and tutorials in \LaTeX
+    \end{itemize}
+}
+
+\cventry{08/01/2013 -- 26/04/2013}{Project: computer graphics}{Implementation of 2 real-time anti-aliasing algorithms}
+{UPS Toulouse}{France}
+{
+    \begin{itemize}
+        \item Post-processing algorithms
+        \item Implemented in an existing 3D engine: VortexEngine
+        \item Enhanced Sub-pixel Morphological Anti-Aliasing (SMAA)
+        \item Joint Bilateral Up-sampling (JBU)
+        \item Written in C++ with OpenGL, GLSL on QtCreator
+    \end{itemize}
+    \begin{itemize}
+        \item State-of-art about anti-aliasing algorithms
+        \item Based on a research of 15 papers from various authors from the scene
+    \end{itemize}
+}
+
+\cventry{10/02/2013-- 20/04/2013}{Project: distributed computing}{Implementation of a DHT based on the Chord algorithm}
+{UPS Toulouse}{France}
+{
+    \begin{itemize}
+        \item Distributed Hash Table: one node of the network can handle multiple keys of the table
+        \item Peer 2 Peer algorithm, optimized for the least network usage
+        \item Written in Java with RMI on Eclipse
+    \end{itemize}
+}
+
+\cventry{ 08/10/2012 --  15/01/2013}{Project: TCP/IP networks}{Created a P2P file sharing system}
+{UPS Toulouse}{France}
+{
+    \begin{itemize}
+        \item TCP/IP, socket programming in Java.
+        \item File splitting in multiple blocks which are send via the network and shared by the users
+        \item Multi-threaded client with multiple parallel downloads
+        \item Support for continuing paused downloads, even multiple hours after pausing
+        \item Written in Java with Sockets only on Eclipse
+    \end{itemize}
+}
+
+\cventry{01/10/2012 -- 28/10/2012}{Project: Multimedia}{Audio/Video player with GStreamer}
+{UPS Toulouse}{France}
+{
+    \begin{itemize}
+        \item Multi-format audio/video player
+        \item Can play the video in ascii art
+        \item Command line options to alter video signal such as: contrast, gamma correction
+        \item Written in C with GStreamer library on Vim
+    \end{itemize}
+}
+
+\section{Technical skills}
+\cvdoubleitem
+{Imperative}{C, GLSL$^*$, CUDA}
+{Script}{Bash, Python$^*$, Powershell$^*$, Matlab}
+
+\cvdoubleitem
+{Object oriented}{C++, Java, C\#}
+{Declarative}{SQL, Prolog}
+
+\cvdoubleitem
+{Web}{jQuery, HTML5, CSS3}
+{Mobile}{Android, jQuery Mobile}
+
+\cvdoubleitem
+{Functional}{OCaml}
+{APIs}{Google Calendar$^*$, OpenGL}
+
+\cvdoubleitem
+{Conception}{Design Patterns, UML}
+{Organisation}{Agile working, Pair Programming, TDD}
+
+\cvdoubleitem
+{System}{VHDL, ARM assembly, POSIX threads and memory sharing, process scheduling, cache algorithms, RISC pipeline techniques}
+{Networking}{C and Java sockets, RMI(Java), TCP/IP, CAN}
+
+\cvdoubleitem
+{OS}{Linux(Debian), Windows}
+{Office}{LaTeX, Office, Google docs}
+
+\cvdoubleitem
+{IDEs}{Vim, Visual Studio, WebStorm, Eclipse, QTCreator, IntellijIDEA}
+{Tools}{git, svn, tfs, sharepoint}
+
+\cvitem{(*)}{self learned}
+
+
+\section{Languages}
+\cvlanguage{Dutch}{bilingual}{mother tongue}
+\cvlanguage{French}{bilingual}{living in France since 2000}
+\cvlanguage{English}{fluent}{reading often, watching TV series and films in English, presentations}
+\cvlanguage{German}{4 years experience}{2 student exchanges from 2 weeks each and learned at school}
+
+
+\section{Hobbies}
+\cvline{Music}{Playing acoustic guitar since 2007}
+\cvline{Sport}{Climbing (indoors) twice a week since 2014}
+\end{document}
