@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{moderncv}
+\documentclass[a4paper,11pt,sans]{moderncv}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -13,10 +13,11 @@
 \maketitle
 
 \section{Summary}
-I am a talented software developer passionate about technology since I was ten years old.
-I develop since 2014 on Android related products, especially smart-watches.
+I am a software developer and passionated by technology since I was ten years old.
+I do platform development since 2014 on Android related products, with focus on smart-watches.
 I shine in learning and sharing technical knowledge.
-I was born in the Netherlands, and raised/schooled in France. Therefore I speak fluent English, French and Dutch.
+I was born in the Netherlands then got my Master Degree in France.
+Therefore I speak fluent English, French and Dutch.
 
 \section{Technical skills}
 \begin{cvcolumns}
@@ -31,14 +32,16 @@ I was born in the Netherlands, and raised/schooled in France. Therefore I speak 
   }
   \cvcolumn{Android}{%
     \begin{itemize}
-      \item platform development
-      \item hardware bring-up
-      \item new product enabling
-      \item optimization
+      \item Platform development
+      \item Hardware bring-up
+      \item New product enabling
+      \item System debug
+      \item Optimization
     \end{itemize}
   }
   \cvcolumn{Other}{%
     \begin{itemize}
+      \item Linux kernel \& userspace
       \item Git
       \item Gerrit
       \item Spacemacs
@@ -46,14 +49,22 @@ I was born in the Netherlands, and raised/schooled in France. Therefore I speak 
   }
 \end{cvcolumns}
     
-
 \section{Key accomplishments}
-\cventry{Audio software stack owner}{}{}{}{}
-        {
-          on Android Wear based products
-        }
-% \item{Manufacturing OS design and development} for Android Wear based products.
-% \item{Platform bring-up} with all features complete in one week travel.
+\begin{cvcolumns}
+  \cvcolumn{Audio software stack}{%
+    On Android Wear based product, I was the audio software stack owner.
+    I have developed, debugged, and fixed in all the software stack. This includes DSP firmware, Linux kernel drivers, Audio HALs and apps (java) level.
+  }
+\end{cvcolumns}
+\begin{cvcolumns}
+  \cvcolumn{Manufacturing OS design/implementation}{%
+    Traveled to China for pre-mass production, on-site troubleshooting and support.
+    Developed Intel wearable Manufacturing OS, for hardware testing on the production line.
+  }
+  \cvcolumn{Platform bring-up}{%
+    Traveled to the Bay Area for a week for a hard-ware bring-up. Audio stack (with codec, speakers, four microphones) was up in two days and had three more days to make the camera work.
+  }
+\end{cvcolumns}
 
 
 \section{Work history}
@@ -79,40 +90,27 @@ I was born in the Netherlands, and raised/schooled in France. Therefore I speak 
     \end{itemize}
 }
 
-\cventry{April, 2014 -- August, 2014}{Internship: software developer focused on middleware/opensourcing}{CELAD}
+\cventry{April, 2014 -- August, 2014}{Internship: Opensource audio HAL component}{CELAD}
 {Toulouse}{France}
 {
-    \begin{itemize}
-        \item Linux, Android middleware and audio HAL
-        \item Agile software development (scrum)
-        \item Pair programming, Test Driven Development
-        \item Git, GitHub, C++, Python, Bash
-    \end{itemize}
+  Worked on open-sourcing the Parameter-Framework, a major component of Intel's Android Audio HAL.
+  This component is now part of Android AOSP (/external/parameter-framework/)
 }
 
-\cventry{May, 2013 -- August, 2013}{Internship: embedded and web development}{24green at Hoogendoorn}
+\cventry{May, 2013 -- August, 2013}{Internship: embedded and web development}{24green}
 {Vlaardingen}{The Netherlands}
 {
-    \begin{itemize}
-        \item Implemented Web API working with their product: 24aqua
-        \item Web and Android example apps to illustrate that API
-        \item Add new controls to 24aqua and extended API to support it
-        \item Automatic configuration scripts for 24aqua
-        \item Microsoft .NET framework, C\#, HTML, SQL, MVC 4.5
-        \item Agile working (scrum), Test Driven Development
-    \end{itemize}
+  Developed a web (REST) API which handles climate control functions in green-houses.
+  This API was then illustrated by example apps, one for Android and one web-based.
+  This was in a Windows Embedded environment, with C\# (for back-end) and HTML/CSS/javascript + java for the example apps
 }
 
-\cventry{April, 2012 -- July, 2012}{Internship: kernel development}{IRIT in team SEPIA}
+\cventry{April, 2012 -- July, 2012}{Internship: linux kernel development}{IRIT}
 {UPS Toulouse}{France}
 {
-    \begin{itemize}
-        \item Governors (DVFS) for the GNU/Linux kernel
-        \item Energy optimisation via software
-        \item Kernel development in C, bash scripts for benchmarking
-        \item Wide scale testing on Grid'5000, a French grid computing network
-        \item Documentation and tutorials in \LaTeX
-    \end{itemize}
+  Linux kernel development around performance counters and other statistics about the hardware.
+  These were inputs to algorithms the research lab simulated to adjust the CPU frequency.
+  After development I performed some tests on a French grid computing network, Grid'5000.
 }
 
 
@@ -125,9 +123,4 @@ I was born in the Netherlands, and raised/schooled in France. Therefore I speak 
   \end{itemize}
 }
 
-
-\section{Languages}
-  \cvlanguage{English}{fluent}{Stay in USA since Feb. 2017}
-  \cvlanguage{French}{bilingual}{Stayed in France between 2000 - 2017}
-  \cvlanguage{Dutch}{bilingual}{mother tongue}
 \end{document}
