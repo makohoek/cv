@@ -13,11 +13,12 @@
 \maketitle
 
 \section{Summary}
-I am a software developer passionate by technology since I am ten years old.
-I specialize in platform development since 2014 on Android related products with focus on smart-watches.
-I shine in learning and sharing technical knowledge.
-I was born in the Netherlands then got my Master Degree in France.
-Therefore I speak fluent English, French and Dutch.
+\begin{cvcolumns}
+  \cvcolumn{}{%
+    I am a software developer passionate in technologies since I was young.
+    Since 2014, I have been working on Android Wear platform development for wearables and delivered the award-winning Tag Heuer Connected watches.
+  }
+\end{cvcolumns}
 
 \section{Technical skills}
 \begin{cvcolumns}
@@ -26,6 +27,7 @@ Therefore I speak fluent English, French and Dutch.
       \item Platform development
       \item Hardware bring-up
       \item New product enabling
+      \item Product development
       \item System debugging
       \item Knowledge from linux kernel to apps (java)
     \end{itemize}
@@ -34,6 +36,7 @@ Therefore I speak fluent English, French and Dutch.
     \begin{itemize}
     \item C
     \item C++
+    \item Git
     \item Python
     \item Java
     \item Bash
@@ -42,9 +45,10 @@ Therefore I speak fluent English, French and Dutch.
   \cvcolumn{Other}{%
     \begin{itemize}
       \item Linux kernel \& userspace
-      \item Production line support
-      \item Git
-      \item Gerrit
+      \item Embedded systems
+      \item Operating systems
+      \item Software development
+      \item Manufacturing support
       \item Spacemacs
     \end{itemize}
   }
@@ -58,10 +62,12 @@ Therefore I speak fluent English, French and Dutch.
   }
 \end{cvcolumns}
 \begin{cvcolumns}
-  \cvcolumn{Manufacturing OS design/implementation}{%
+  \cvcolumn{Custom Android ROM for production line}{%
     Traveled two weeks to China for pre-mass production, on-site troubleshooting and support.
-    Developed Intel wearable Manufacturing OS, for hardware testing on the production line.
+    Designed and implemented Intel wearable Manufacturing OS (based on Android), for hardware testing on the production line.
   }
+\end{cvcolumns}
+\begin{cvcolumns}
   \cvcolumn{Platform bring-up}{%
     Traveled one week to the Bay Area for a hard-ware bring-up. Audio stack (with codec, speakers, four microphones) was up in two days and had three more days to make the camera work.
   }
@@ -69,60 +75,95 @@ Therefore I speak fluent English, French and Dutch.
 
 
 \section{Work history}
-\cventry{Feb, 2017 -- Current}{Linux/Android R\&D for Intel New Device Group}{CELAD}
-{San Francisco Bay Area}{USA}
+\subsection{Intel New Device Group}
+\cventry{Feb, 2017 -- Current}{Android platorm engineer}{CELAD}
+{San Francisco Bay Area}{}
 {%
   \begin{itemize}
-  \item Software developer and integrator on Android Wear products with Intel inside
+  \item Android platform engineer on Android Wear products with Intel inside
   \item Active during entire product lifecycle from the early schematics to the end-user software releases.
+  \item Several roles including platform developer, system debugger, and factory line support.
+  \item Technical skills:
+    \begin{itemize}
+    \item Android/Linux device drivers (ASoC), intel platform drivers
+    \item Android frameworks: audio HALs, other HALs, Treble
+    \item Android apps: mainly debugging, no development.
+    \item Production line support, system debugging, hardware bring-ups
+    \item Linux, C, C++, Java, Git, Python, XML, Bash, Android build system
+    \end{itemize}
   \end{itemize}
 }
 
-\cventry{Sept, 2014 -- Jan, 2017}{Linux/Android R\&D for Intel New Device Group}{CELAD}
-{Toulouse}{France}
+\cventry{Sept, 2014 -- Jan, 2017}{Android platform engineer}{CELAD}
+{}{France}
 {
     \begin{itemize}
-    \item Software developer and integrator on Android Wear products with Intel inside
-      \item Audio stack, low-power bluetooth playback, microphone for voice recognition
-      \item Developed a Manufacturing OS used for mass production and quality screening
+    \item Android platform engineer on Android Wear products with Intel inside
+    \item Implemented Android Audio stack (HAL, linux machine driver (ASoC)) for digital microphone (voice recognition)
+    \item Developed a low-power bluetooth audio playback architecture (A2DP)
+    \item Designed a custom Android ROM used for mass production testing and quality screening in the factory.
+    \item Technical skills:
+      \begin{itemize}
+        \item Android/Linux device drivers (ASoC framework) and DSP Firmware
+        \item Android frameworks: audio HAL, AudioFlinger, AudioPolicy
+        \item Production line support, system debugging, hardware bring-ups
+        \item Linux, C, C++, Git, Python, XML, Bash, Android build system
+      \end{itemize}
     \end{itemize}
 }
 
-\cventry{Apr, 2014 -- Aug, 2014}{Internship: Opensource audio HAL component}{CELAD}
-{Toulouse}{France}
+\subsection{Internships}
+\cventry{Apr, 2014 -- Aug, 2014}{Android Audio developer}{CELAD}
+{}{France}
 {
   \begin{itemize}
     \item Open-sourced the Parameter-Framework, a major component of Intel's Android Audio HAL
     \item Component is now part of Android AOSP (/external/parameter-framework/)
+    \item Extended audio stack on Intel phone reference platforms (dual sim)
+    \item Technical skills:
+    \begin{itemize}
+      \item Linux, C, C++ Git, XML, markdown, Android platform
+    \end{itemize}
   \end{itemize}
 }
 
-\cventry{May, 2013 -- Aug, 2013}{Internship: embedded and web development}{24green}
-{Vlaardingen}{The Netherlands}
+\cventry{May, 2013 -- Aug, 2013}{Windows embedded developer}{24green}
+{}{The Netherlands}
 {
   \begin{itemize}
-  \item Developed a web (REST) API which handles climate control functions in green-houses and apps to illustrate the API
-  \item Windows Embedded environment, with C\# (for back-end) and HTML/CSS/javascript + java (for front-end)
+    \item Developed a web (REST) API which handles climate control functions in green-houses.
+    \item Created apps to illustrate the API.
+    \item Technical skills:
+    \begin{itemize}
+      \item C\#, Windows XP embedded
+      \item javascript, html, CSS, java
+    \end{itemize}
   \end{itemize}
 }
 
-\cventry{Apr, 2012 -- Jul, 2012}{Internship: linux kernel development}{IRIT}
-{UPS Toulouse}{France}
+\cventry{Apr, 2012 -- Jul, 2012}{Linux kernel developer}{IRIT}
+{}{France}
 {
   \begin{itemize}
     \item Linux kernel development around performance counters and other hardware metrics
+    \item Modules developed used by research lab for experiments on CPU frequency (power savings)
     \item Real world testing on a French research grid computing network, Grid'5000
+    \item Technical skills:
+      \begin{itemize}
+        \item Linux kernel, device drivers, C, GNU make, Bash
+      \end{itemize}
   \end{itemize}
 }
 
 
 \section{Education}
-\cventry{2013 -- 2014}{Paul Sabatier University}{Toulouse, France}{CAMSI (Informatics, Systems and Machine Architecture Concepts)}{Master's degree}
+\cventry{2009 -- 2014}{Paul Sabatier University}{Toulouse, France}{CAMSI (Informatics, Systems and Machine Architecture Concepts)}{Master's degree}
 {
   \begin{itemize}
   \item rank 1/18 (Valedictorian)
   \item overall score > 85\%
   \end{itemize}
 }
+
 
 \end{document}
