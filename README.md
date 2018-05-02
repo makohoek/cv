@@ -1,5 +1,5 @@
 # cv
-Mattijs Korpershoek's resume
+Mattijs Korpershoek's Curriculum Vitae
 
 Online Pdf preview:
 https://github.com/Makohoek/cv/blob/master/CV-MattijsKorpershoek.pdf
