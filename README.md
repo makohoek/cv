@@ -1,8 +1,8 @@
 # cv
-LaTeX sources of my CV
+Mattijs Korpershoek's resume
 
-A render of the pdf version is available here:
+Online Pdf preview:
 https://github.com/Makohoek/cv/blob/master/CV-MattijsKorpershoek.pdf
 
-To download the pdf version, use this link:
+Download link:
 https://github.com/Makohoek/cv/raw/master/CV-MattijsKorpershoek.pdf
