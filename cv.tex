@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt,sans]{moderncv}
+\documentclass[a4paper,10pt,sans,colorlinks=true]{moderncv}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -8,22 +8,57 @@
 \input{contactInformation}
 \input{modernCVTheme}
 
-
 \begin{document}
 
-\maketitle
+%\definecolor{links}{HTML}{000000}
+\definecolor{links-header}{rgb}{0.45,0.45,0.45}% dark grey
+\hypersetup{urlcolor=links-header}
 
-\addvspace{10ex}
+\maketitle
+\definecolor{links-content}{HTML}{0000EE}% standard blue
+\hypersetup{
+  urlcolor=links-content,
+%  urlbordercolor=links-content,
+%  linkbordercolor={0 0 0},
+%  pdfborder={0 0 1},
+%  pdfborderstyle={/S/U/W 1} % Underline links (thickness: 1pt)}
+}
+
+\addvspace{5ex}
 
 \section{Summary}
 \begin{cvcolumns}
   \cvcolumn{}{%
-    I am a software developer passionate in technologies since I was young.
-    Since 2014, I have been working on Android Wear platform development for wearables and delivered the award-winning Tag Heuer Connected watches.
+    I am an embedded Android/Linux software engineer with 10+ years of experience.
+    I have contributed to multiple open source projects such as the Linux Kernel, U-Boot, Libcamera, Android Open Source Project (AOSP) and more.
+    I have ported Android (9 to 15) on multiple ARM boards with different SoCs including MediaTek, Texas Instruments and Amlogic.
   }
 \end{cvcolumns}
 
-\addvspace{10ex}
+\addvspace{3ex}
+
+\section{Open source contributions}
+\begin{cvcolumns}
+  \cvcolumn{}{%
+    \begin{itemize}
+    \item \href{https://lore.kernel.org/lkml/?q=mkorpershoek\%40baylibre.com}{Linux Kernel}
+    \item \href{https://android-review.googlesource.com/q/owner:mkorpershoek@baylibre.com+AND+status:merged}{Android (AOSP)}
+    \end{itemize}
+  }
+  \cvcolumn{}{%
+    \begin{itemize}
+    \item \href{https://patchwork.ozlabs.org/project/uboot/list/?series=&submitter=77589&state=3&q=&archive=&delegate=}{U-Boot}
+    \item \href{https://patchwork.libcamera.org/project/libcamera/list/?series=&submitter=153&state=3&q=&archive=&delegate=}{Libcamera}
+    \end{itemize}
+  }
+  \cvcolumn{}{%
+    \begin{itemize}
+    \item \href{https://github.com/mesonbuild/meson/pull/12361}{Meson}
+    \end{itemize}
+  }
+\end{cvcolumns}
+
+\addvspace{3ex}
 
 \section{Technical skills}
 \begin{cvcolumns}
@@ -35,16 +70,6 @@
       \item Product development
       \item System debugging
       \item Knowledge from Linux kernel to apps (java)
-    \end{itemize}
-  }
-  \cvcolumn{Languages}{%
-    \begin{itemize}
-    \item C
-    \item C++
-    \item Git
-    \item Python
-    \item Java
-    \item Bash
     \end{itemize}
   }
   \cvcolumn{Other}{%
@@ -59,32 +84,38 @@
   }
 \end{cvcolumns}
 
-\addvspace{10ex}
+\addvspace{5ex}
 
 \section{Key accomplishments}
 \begin{cvcolumns}
-  \cvcolumn{Audio software stack}{%
-    I was the audio software stack owner on Android Wear based products.
-    I have developed and debugged several places in the software stack including DSP firmware, Linux kernel drivers, Audio HALs and apps (java).
-  }
-\end{cvcolumns}
-\begin{cvcolumns}
-  \cvcolumn{Custom Android ROM for production line}{%
-    Traveled two weeks to China for pre-mass production, on-site troubleshooting and support.
-    Designed and implemented Intel wearable Manufacturing OS (based on Android), for hardware testing on the production line.
-  }
-\end{cvcolumns}
-\begin{cvcolumns}
-  \cvcolumn{Platform bring-up}{%
-    Traveled one week to the Bay Area for a hard-ware bring-up. Audio stack (with codec, speakers, four microphones) was up in two days and had three more days to make the camera work.
-  }
-\end{cvcolumns}
-\begin{cvcolumns}
-  \cvcolumn{Multiple products}{%
-    I worked on several Intel based Android Wear products such as Fossil Q Founder, Tag Heuer Connected 46, Tag Heuer Connected Modular 45 and New Balance RunIQ.
+  \cvcolumn{Speaker at ELC in Open Source Summit Europe 2024}{%
+    In a 40 minutes \href{https://osseu2024.sched.com/event/1ej1D/how-to-enable-android-aosp-on-your-developer-board-mattijs-korpershoek-baylibre}{talk} named "How to Enable Android (AOSP) on Your Developer Board", I walk through what it takes to run a modern Android (14) on the BeaglePlay ARM development board.
   }
 \end{cvcolumns}
 
+\addvspace{1ex}
+
+\begin{cvcolumns}
+  \cvcolumn{U-Boot maintainer/custodian (DFU, usb gadget, Android)}{%
+    In 2023, after contributing multiple USB fixes, I've been asked to help co-maintaining multiple topics in U-Boot, such as USB gadget, DFU, and some Android related commands. Since then, I've been actively improving the Android support and done \href{https://lore.kernel.org/u-boot/?q=mkorpershoek\%40baylibre.com}{lots of testing and reviewing} for each U-Boot release.
+  }
+\end{cvcolumns}
+
+\addvspace{1ex}
+
+\begin{cvcolumns}
+  \cvcolumn{Founding member of the aosp-devs community}{%
+    Android BSP developers did not have a neutral place to hang out and discuss technical issues or do knowledge sharing publicly. I participated in the \href{https://aosp-devs.org/about}{aosp-devs} initiative: A community for AOSP developers.
+  }
+\end{cvcolumns}
+
+\addvspace{1ex}
+
+\begin{cvcolumns}
+  \cvcolumn{Android multimedia support on Texas Instruments Sitara boards}{%
+    Texas Instruments provide Android support for their Sitara AM62X and AM62P SoCs. I have enabled various key multimedia features such as \href{https://git.ti.com/cgit/android/external-libcamera/log/?h=d-android15-release\&qt=author\&q=mkorpershoek}{CSI camera support} and \href{https://git.ti.com/cgit/android/external-v4l2\_codec2/log/?h=d-android15-release\&qt=author\&q=mkorpershoek}{video encode/decode acceleration} in Android. I'm also responsible for the Android 15 migration and helped with backporting patches from mainline to the Android Common Kernels (6.6)
+  }
+\end{cvcolumns}
 
 \section{Work history}
 \subsection{Intel New Device Group}
