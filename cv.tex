@@ -10,12 +10,12 @@
 
 \begin{document}
 
-%\definecolor{links}{HTML}{000000}
-\definecolor{links-header}{rgb}{0.45,0.45,0.45}% dark grey
-\hypersetup{urlcolor=links-header}
+\hypersetup{urlcolor=gray-entry}
+
+\renewcommand*{\titlestyle}[1]{{\titlefont\textcolor{color2}{#1}}}
 
 \maketitle
-\definecolor{links-content}{HTML}{0000EE}% standard blue
+\definecolor{links-content}{HTML}{0875E1}% standard blue
 \hypersetup{
   urlcolor=links-content,
 %  urlbordercolor=links-content,
@@ -24,14 +24,16 @@
 %  pdfborderstyle={/S/U/W 1} % Underline links (thickness: 1pt)}
 }
 
+\renewcommand*{\subsectionstyle}[1]{{\large\bfseries\color{gray-entry}{#1}}}
+
 \addvspace{5ex}
 
 \section{Summary}
 \begin{cvcolumns}
   \cvcolumn{}{%
-    I am an embedded Android/Linux software engineer with 10+ years of experience.
+    I am an embedded Linux Kernel/Android Software Engineer with 10+ years of experience.
     I have contributed to multiple open source projects such as the Linux Kernel, U-Boot, Libcamera, Android Open Source Project (AOSP) and more.
-    I have ported Android (9 to 15) on multiple ARM boards with different SoCs including MediaTek, Texas Instruments and Amlogic.
+    I have ported various Android versions (9 to 15) on multiple ARM boards with different SoCs including MediaTek, Texas Instruments and Amlogic.
   }
 \end{cvcolumns}
 
@@ -62,24 +64,25 @@
 
 \section{Technical skills}
 \begin{cvcolumns}
-  \cvcolumn{Android}{%
+  \cvcolumn{General}{%
     \begin{itemize}
-      \item Platform development
-      \item Hardware bring-up
-      \item New product enabling
-      \item Product development
+      \item Linux kernel upstream development
+      \item U-Boot (maintainer)
+      \item Device Tree
+      \item Git and backporting patches
+      \item Code review and mentoring
       \item System debugging
-      \item Knowledge from Linux kernel to apps (java)
+      \item CI/CD
     \end{itemize}
   }
-  \cvcolumn{Other}{%
+  \cvcolumn{Android}{%
     \begin{itemize}
-      \item Linux kernel \& userspace
-      \item Embedded systems
-      \item Operating systems
-      \item Software development
-      \item Manufacturing support
-      \item Spacemacs
+      \item BSP development for various SoC vendors
+      \item Multiple ARM board support from scratch
+      \item Boot flow on ARM boards (U-Boot)
+      \item Android Common Kernel (bazel)
+      \item HALs (including AIDL)
+      \item OTA, multimedia, bringup
     \end{itemize}
   }
 \end{cvcolumns}
@@ -105,7 +108,7 @@
 
 \begin{cvcolumns}
   \cvcolumn{Founding member of the aosp-devs community}{%
-    Android BSP developers did not have a neutral place to hang out and discuss technical issues or do knowledge sharing publicly. I participated in the \href{https://aosp-devs.org/about}{aosp-devs} initiative: A community for AOSP developers.
+    Android BSP developers did not have a neutral public place to hang out, discuss technical issues or share knowledge. I am a founding member of the \href{https://aosp-devs.org/about}{aosp-devs} initiative: a community for AOSP developers with over 300 members.
   }
 \end{cvcolumns}
 
@@ -113,13 +116,56 @@
 
 \begin{cvcolumns}
   \cvcolumn{Android multimedia support on Texas Instruments Sitara boards}{%
-    Texas Instruments provide Android support for their Sitara AM62X and AM62P SoCs. I have enabled various key multimedia features such as \href{https://git.ti.com/cgit/android/external-libcamera/log/?h=d-android15-release\&qt=author\&q=mkorpershoek}{CSI camera support} and \href{https://git.ti.com/cgit/android/external-v4l2\_codec2/log/?h=d-android15-release\&qt=author\&q=mkorpershoek}{video encode/decode acceleration} in Android. I'm also responsible for the Android 15 migration and helped with backporting patches from mainline to the Android Common Kernels (6.6)
+    Texas Instruments provides Android support for their Sitara AM62X and AM62P SoCs. I have enabled key multimedia features such as \href{https://git.ti.com/cgit/android/external-libcamera/log/?h=d-android15-release\&qt=author\&q=mkorpershoek}{CSI camera support} and \href{https://git.ti.com/cgit/android/external-v4l2\_codec2/log/?h=d-android15-release\&qt=author\&q=mkorpershoek}{video encode/decode acceleration} in Android. I'm also responsible for the Android 15 migration and helped with backporting patches from mainline to the Android Common Kernels (6.6)
   }
 \end{cvcolumns}
 
 \section{Work history}
-\subsection{Intel New Device Group}
-\cventry{Feb, 2017 -- Current}{Android platform engineer}{CELAD}
+\subsection{Jan, 2020 -- Current}
+\cventry{}{Linux Kernel/Android software engineer}{BayLibre}
+{Toulouse/remote}{France}
+{%
+  \begin{itemize}
+  \item Worked remotely in small teams of 2-3 engineers
+  \item Open-source advocate internally, Android technical leadership
+  \item All-around general-purpose engineering work from bootloaders to apps
+  \item Android BSP development for multiple SoC vendors
+  \item Texas Instruments (Sitara)
+    \begin{itemize}
+    \item Main developer for TI's \href{https://software-dl.ti.com/processor-sdk-android/esd/AM62PX/10_01_00/docs/devices/AM62PX/android/Release_Specific_Release_Notes.html}{Android SDK}
+    \item Development from scratch (AOSP only)
+    \item Upstream first strategy, working closely with TI's kernel team
+    \item Released Android versions 11 -- 15
+    \item Enable new hardware features such as display support, video decoding, CSI camera
+    \item Keep up to date with latest Android requirements: HAL migration to AIDL
+    \item Track upstream U-Boot and backport/submit features
+    \item Android tablet, Android Automotive versions
+    \item Monitor automated testing and improve CTS/VTS coverage
+    \item Brought up a community board (\href{https://www.beagleboard.org/boards/beagleplay}{BeaglePlay})
+    \end{itemize}
+  \item Amlogic
+    \begin{itemize}
+    \item Worked on \href{https://source.android.com/docs/setup/create/devices\#vim3board}{Khadas VIM3} Android reference board
+    \item AOSP upstreaming and maintenance
+    \item Upstreamed 30+ patches to U-Boot for implementing Android bootflow
+    \item Added board support in \href{https://android-review.googlesource.com/c/kernel/common/+/3296472}{Android Common Kernel}
+    \item Worked with Android TV team for debugging or new features
+    \end{itemize}
+  \item MediaTek:
+    \begin{itemize}
+    \item Started \href{https://gitlab.baylibre.com/baylibre/mediatek/rita/device/mediatek}{MediaTek Genio} support from scratch
+    \item Used ChromeOS kernel as baseline
+    \item Supported multiple customers to bring out their products using this BSP
+    \item Started from board bring-up to customer mass-production
+    \item Provided technical training/support to customers
+    \item Low maintenance Android BSP, merging most things from upstream
+    \item Upgraded to major kernel versions multiple times
+    \end{itemize}
+  \end{itemize}
+}
+
+\subsection{Feb, 2017 -- Dec, 2019}
+\cventry{}{Android platform engineer}{Intel (Celad)}
 {Santa Clara}{USA}
 {%
   \begin{itemize}
@@ -137,8 +183,9 @@
   \end{itemize}
 }
 
-\cventry{Sept, 2014 -- Jan, 2017}{Android platform engineer}{CELAD}
-{}{France}
+\subsection{Sept, 2014 -- Jan, 2017}
+\cventry{}{Android platform engineer}{Intel (Celad)}
+{Toulouse}{France}
 {
     \begin{itemize}
     \item Android platform engineer on Android Wear products with Intel inside
@@ -155,9 +202,9 @@
     \end{itemize}
 }
 
-\subsection{Internships}
-\cventry{Apr, 2014 -- Aug, 2014}{Android Audio developer}{CELAD}
-{}{France}
+\subsection{Apr, 2014 -- Aug, 2014}
+\cventry{}{Android Audio developer (internship)}{Intel (Celad)}
+{Toulouse}{France}
 {
   \begin{itemize}
     \item Open-sourced the Parameter-Framework, a major component of Intel's Android Audio HAL
@@ -170,8 +217,9 @@
   \end{itemize}
 }
 
-\cventry{May, 2013 -- Aug, 2013}{Windows developer}{24green}
-{}{The Netherlands}
+\subsection{May, 2013 -- Aug, 2013}
+\cventry{}{Windows developer (internship)}{24green}
+{Vlaardingen}{The Netherlands}
 {
   \begin{itemize}
     \item Developed a web (REST) API which handles climate control functions in green-houses.
@@ -184,8 +232,9 @@
   \end{itemize}
 }
 
-\cventry{Apr, 2012 -- Jul, 2012}{Linux kernel developer}{IRIT}
-{}{France}
+\subsection{Apr, 2012 -- Jul, 2012}
+\cventry{}{Linux kernel developer (internship)}{IRIT}
+{Toulouse}{France}
 {
   \begin{itemize}
     \item Linux kernel development around performance counters and other hardware metrics
@@ -201,9 +250,12 @@
 \addvspace{5ex}
 
 \section{Education}
-\cventry{2009 -- 2014}{Paul Sabatier University}{Toulouse, France}{CAMSI (Informatics, Systems and Machine Architecture Concepts)}{Master's degree}
+\subsection{2009 -- 2014}
+\cventry{}{CAMSI Master's degree}{Paul Sabatier University}
+{Toulouse}{France}
 {
   \begin{itemize}
+  \item CAMSI: Informatics, Systems and Machine Architecture Concepts
   \item rank 1/18 (Valedictorian)
   \item overall score > 85\%
   \end{itemize}
